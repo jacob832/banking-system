@@ -1,10 +1,8 @@
 /* eslint-disable no-unused-vars */
-
-declare type SearchParamProps = {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
+type Params = Promise<{
+  userId: any; slug: string 
+}>
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
 // ========================================
 
 declare type SignUpParams = {
@@ -60,7 +58,7 @@ declare type Account = {
   type: string;
   subtype: string;
   appwriteItemId: string;
-  sharableId: string;
+  shareableId: string;
 };
 
 declare type Transaction = {
@@ -89,7 +87,7 @@ declare type Bank = {
   accessToken: string;
   fundingSourceUrl: string;
   userId: string;
-  sharableId: string;
+  shareableId: string;
 };
 
 declare type AccountTypes =
